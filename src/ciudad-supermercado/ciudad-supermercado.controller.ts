@@ -10,17 +10,17 @@ import {
 import { BusinessErrorsInterceptor } from '../shared/interceptors/business-errors.interceptor';
 import { CiudadSupermercadoService } from './ciudad-supermercado.service';
 
-@Controller('ciudad/:ciudadId')
+@Controller('cities/:cityId')
 @UseInterceptors(BusinessErrorsInterceptor)
 export class CiudadSupermercadoController {
   constructor(
     private readonly ciudadSupermercadoService: CiudadSupermercadoService,
   ) {}
 
-  @Post('/supermercado/:supermercadoId')
+  @Post('/supermarket/:supermarketId')
   async addRecipeCulture(
-    @Param('ciudadId') ciudadId: string,
-    @Param('supermercadoId') supermercadoId: string,
+    @Param('cityId') ciudadId: string,
+    @Param('supermarketId') supermercadoId: string,
   ) {
     return await this.ciudadSupermercadoService.addSupermercadoCiudad(
       ciudadId,
@@ -28,10 +28,10 @@ export class CiudadSupermercadoController {
     );
   }
 
-  @Get('/supermercado/:supermercadoId')
+  @Get('/supermarket/:supermarketId')
   async findSupermercadoByCiudadIdSupermercadoId(
-    @Param('ciudadId') ciudadId: string,
-    @Param('supermercadoId') supermercadoId: string,
+    @Param('cityId') ciudadId: string,
+    @Param('supermarketId') supermercadoId: string,
   ) {
     return await this.ciudadSupermercadoService.findsupermercadoByciudadIdsupermercadoId(
       ciudadId,
@@ -40,17 +40,17 @@ export class CiudadSupermercadoController {
   }
 
   @Get('')
-  async findRecipesByCultureId(@Param('ciudadId') ciudadId: string) {
+  async findRecipesByCultureId(@Param('cityId') ciudadId: string) {
     return await this.ciudadSupermercadoService.findsupermercadosByciudadId(
       ciudadId,
     );
   }
 
-  @Delete('/supermercado/:supermercadoId')
+  @Delete('/supermarket/:supermarketId')
   @HttpCode(204)
   async deleteRecipeCulture(
-    @Param('ciudadId') ciudadId: string,
-    @Param('supermercadoId') supermercadoId: string,
+    @Param('cityId') ciudadId: string,
+    @Param('supermarketId') supermercadoId: string,
   ) {
     return await this.ciudadSupermercadoService.deletesupermercadosciudad(
       ciudadId,

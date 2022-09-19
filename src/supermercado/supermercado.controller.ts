@@ -15,7 +15,7 @@ import { SupermercadoEntity } from './supermercado.entity';
 
 import { plainToInstance } from 'class-transformer';
 
-@Controller('supermercado')
+@Controller('supermarkets')
 @UseInterceptors(BusinessErrorsInterceptor)
 export class SupermercadoController {
   constructor(private readonly SupermercadoService: SupermercadoService) {}
@@ -25,8 +25,8 @@ export class SupermercadoController {
     return await this.SupermercadoService.findAll();
   }
 
-  @Get(':supermercadoId')
-  async findOne(@Param('supermercadoId') supermercadoId: string) {
+  @Get(':supermarketId')
+  async findOne(@Param('supermarketId') supermercadoId: string) {
     return await this.SupermercadoService.findOne(supermercadoId);
   }
 
@@ -39,9 +39,9 @@ export class SupermercadoController {
     return await this.SupermercadoService.create(supermercado);
   }
 
-  @Put(':supermercadoId')
+  @Put(':supermarketId')
   async update(
-    @Param('supermercadoId') supermercadoId: string,
+    @Param('supermarketId') supermercadoId: string,
     @Body() SupermercadoDto: SupermercadoDto,
   ) {
     const recipe: SupermercadoEntity = plainToInstance(
@@ -51,8 +51,8 @@ export class SupermercadoController {
     return await this.SupermercadoService.update(supermercadoId, recipe);
   }
 
-  @Delete(':supermercadoId')
-  async delete(@Param('supermercadoId') supermercadoId: string) {
+  @Delete(':supermarketId')
+  async delete(@Param('supermarketId') supermercadoId: string) {
     return await this.SupermercadoService.delete(supermercadoId);
   }
 }

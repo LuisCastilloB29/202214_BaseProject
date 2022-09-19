@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "494adf69-0756-46c3-8c1a-f78336ca83ac",
+		"name": "Ciudad",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Cities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/cities",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"cities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get city by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/cities/49d3ce83-3efd-4bff-9dda-1ee6bd1224d8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"cities",
+						"49d3ce83-3efd-4bff-9dda-1ee6bd1224d8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get citi by Id not found",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/cities/123-3456-789",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"cities",
+						"123-3456-789"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create valid city",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Buenos aires\",\r\n    \"pais\": \"Argentina\",\r\n    \"habitantes\": \"12000000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/cities",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"cities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create invalid city",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"data_invalida\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/cities",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"cities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a valid city",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/cities/49d3ce83-3efd-4bff-9dda-1ee6bd1224d8 \n",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"cities",
+						"49d3ce83-3efd-4bff-9dda-1ee6bd1224d8 \n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a invalid city",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"data_invalida\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/cities/123-456-789",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"cities",
+						"123-456-789"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a valid city",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/cities/49d3ce83-3efd-4bff-9dda-1ee6bd1224d8 \n",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"cities",
+						"49d3ce83-3efd-4bff-9dda-1ee6bd1224d8 \n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a invalid city",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/cities/123-456-789\n",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"cities",
+						"123-456-789\n"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

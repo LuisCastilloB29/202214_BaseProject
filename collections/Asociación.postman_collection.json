@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "109e0b7a-2715-4b92-944d-b5596ba2bfc5",
+		"name": "Asociación",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Supermarkets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/cities/49d3ce83-3efd-4bff-9dda-1ee6bd1224d8/supermarkets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"cities",
+						"49d3ce83-3efd-4bff-9dda-1ee6bd1224d8",
+						"supermarkets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get supermarket by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/citites/49d3ce83-3efd-4bff-9dda-1ee6bd1224d8/supermarkets/fae0fc24-08ff-4e6d-aaf5-71d411e468ee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"citites",
+						"49d3ce83-3efd-4bff-9dda-1ee6bd1224d8",
+						"supermarkets",
+						"fae0fc24-08ff-4e6d-aaf5-71d411e468ee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get citi by Id not found",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/citites/49d3ce83-3efd-4bff-9dda-1ee6bd1224d8/supermarkets/123-3456-789",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"citites",
+						"49d3ce83-3efd-4bff-9dda-1ee6bd1224d8",
+						"supermarkets",
+						"123-3456-789"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Asociate valid supermarket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cityId\": \"49d3ce83-3efd-4bff-9dda-1ee6bd1224d8\",\r\n    \"supermarketId\": \"fae0fc24-08ff-4e6d-aaf5-71d411e468ee\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Asociate invalid supermarket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"data_invalida\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a valid supermarket",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"supermarketId\": \"fae0fc24-08ff-4e6d-aaf5-71d411e468ee\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/cities/49d3ce83-3efd-4bff-9dda-1ee6bd1224d8 \n",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"cities",
+						"49d3ce83-3efd-4bff-9dda-1ee6bd1224d8 \n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a invalid supermarket",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"data_invalida\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/supermarkets/123-456-789",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"supermarkets",
+						"123-456-789"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a valid supermarket",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/cities/49d3ce83-3efd-4bff-9dda-1ee6bd1224d8/supermarkets/fae0fc24-08ff-4e6d-aaf5-71d411e468ee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"cities",
+						"49d3ce83-3efd-4bff-9dda-1ee6bd1224d8",
+						"supermarkets",
+						"fae0fc24-08ff-4e6d-aaf5-71d411e468ee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a invalid supermarket",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/cities/49d3ce83-3efd-4bff-9dda-1ee6bd1224d8/supermarkets/123-456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"cities",
+						"49d3ce83-3efd-4bff-9dda-1ee6bd1224d8",
+						"supermarkets",
+						"123-456"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

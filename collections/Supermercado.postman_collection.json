@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "cf33ab7d-49ef-4603-8437-213431bbb107",
+		"name": "Supermercado",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Supermarkets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/supermarkets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"supermarkets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get supermarket by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/supermarkets/fae0fc24-08ff-4e6d-aaf5-71d411e468ee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"supermarkets",
+						"fae0fc24-08ff-4e6d-aaf5-71d411e468ee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get citi by Id not found",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/supermarkets/123-3456-789",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"supermarkets",
+						"123-3456-789"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create valid supermarket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"La Vaca\",\r\n    \"latitud\": \"-34.650655\",\r\n    \"longitud\": \"-58.476028\",\r\n    \"paginaweb\": \"https://lavaca.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/supermarkets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"supermarkets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create invalid supermarket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"data_invalida\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/supermarkets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"supermarkets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a valid supermarket",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"La Vaca Restaruante\",\r\n    \"latitud\": \"-34.650655\",\r\n    \"longitud\": \"-58.476028\",\r\n    \"paginaweb\": \"https://lavaca.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/supermarkets/49d3ce83-3efd-4bff-9dda-1ee6bd1224d8 \n",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"supermarkets",
+						"49d3ce83-3efd-4bff-9dda-1ee6bd1224d8 \n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a invalid supermarket",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"data_invalida\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/supermarkets/123-456-789",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"supermarkets",
+						"123-456-789"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a valid supermarket",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/supermarkets/49d3ce83-3efd-4bff-9dda-1ee6bd1224d8 \n",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"supermarkets",
+						"49d3ce83-3efd-4bff-9dda-1ee6bd1224d8 \n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a invalid supermarket",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/supermarkets/123-456-789\n",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"supermarkets",
+						"123-456-789\n"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
